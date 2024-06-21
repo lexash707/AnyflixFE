@@ -6,6 +6,7 @@ import { LoginFormComponent } from './login/login-form/login-form.component';
 import { AddSeriesFormComponent } from './add-series/add-series-form/add-series-form.component';
 import { DetailCardComponent } from './details/detail-card/detail-card.component';
 import { CommentCardComponent } from './comment/comment-card/comment-card.component';
+import { NavbarComponent } from './navbar/navbar/navbar.component';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,8 @@ import { CommentCardComponent } from './comment/comment-card/comment-card.compon
     LoginFormComponent, 
     AddSeriesFormComponent, 
     DetailCardComponent,
-    CommentCardComponent
+    CommentCardComponent,
+    NavbarComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'] 

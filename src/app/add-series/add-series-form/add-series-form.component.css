@@ -1,13 +1,10 @@
-/* styles.css */
-
 .card-bg-dark {
     background-color: #343a40; /* Dark background */
     color: white; /* White text */
     border: none; /* No border */
     border-radius: 10px; /* Rounded corners */
     padding: 20px; /* Padding inside the card */
-  }
-  
+}
   .btn-primary {
     background-color: #960018; /* Red background */
     border-color: #dc3545; /* Button border color */
