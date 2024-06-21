@@ -1,0 +1,46 @@
+.card-horizontal {
+    display: flex;
+    flex-direction: row;
+    border: none;
+    border-radius: 10px;
+    background-color: #343a40; /* Dark background */
+    color: white; /* White text */
+  }
+  
+  .card-horizontal .card-body {
+    padding: 20px;
+  }
+  
+  .card-horizontal .img-fluid {
+    border-radius: 10px 0 0 10px;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .btn-primary {
+    background-color: #960018; /* Red background */
+    border-color: #dc3545; /* Button border color */
+    color: white; /* White text */
+    font-weight: bold; /* Bold text */
+  }
+  
+  .btn-primary:hover {
+    background-color: #c82333; /* Darker red on hover */
+    border-color: #bd2130; /* Darker border color on hover */
+  }
+  
+  .form-control {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside input and select */
+    margin-bottom: 10px; /* Bottom margin */
+    border: 1px solid #ced4da; /* Border color */
+    border-radius: 4px; /* Rounded corners */
+    background-color: #343a40; /* Dark background */
+    color: white; /* White text */
+  }
+  
+  .form-label {
+    margin-bottom: 5px; /* Bottom margin for labels */
+    color: white; /* White label text */
+  }
+  
