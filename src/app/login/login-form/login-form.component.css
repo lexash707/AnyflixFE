@@ -1,0 +1,19 @@
+.card-bg-dark {
+    background-color: #343a40; /* Dark background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  }
+  
+  .btn-primary {
+    background-color: #960018; /* Red background */
+    border-color: #dc3545; /* Border color */
+    width: 100%; /* Make the button full width of its container */
+  }
+  
+  .btn-primary:hover {
+    background-color: #c82333; /* Darker red on hover */
+    border-color: #bd2130; /* Darker border on hover */
+  }
+  

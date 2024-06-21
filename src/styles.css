@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #000; /* Set background color to black */
+  }
+  .navbar-toggler {
+    border-color: #dc3545; /* Red border */
+  }
+  .navbar-toggler .navbar-toggler-icon {
+    background-color: #dc3545; /* Red background */
+  }
+  .navbar {
+    margin-bottom: 20px; /* Space between navbar and content */
+  }
+  .form-control.me-2 {
+    margin-right: 0.5rem; /* Space between form control and filter button */
+  }
+  .btn-group .dropdown-toggle {
+    margin-right: 0.5rem; /* Space between filter button and search button */
+    margin-left: 1rem ;
+  }
+  .navbar-brand {
+    color: #dc3545 !important; /* Red color for Anyflix */
+    font-weight: bold; /* Bold font weight */
+  }
+  .navbar-login {
+    margin-left: auto; /* Align login button to the right */
+  }
+  .btn-login {
+    background-color: #dc3545; /* Red background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    margin-left: 10rem;
+  }
+  .btn-login:hover,
+  .btn-login:focus {
+    color: white; /* White text on hover/focus */
+    background-color: #c82333; /* Darker red on hover/focus */
+  }
+  .navbar-form {
+    flex-grow: 1; /* Allow the form to grow and take up remaining space */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+  }

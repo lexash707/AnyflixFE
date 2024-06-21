@@ -1,0 +1,46 @@
+/* styles.css */
+
+.card-bg-dark {
+  background-color: #343a40; /* Dark background */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside the card */
+}
+
+.btn-primary {
+  background-color: #960018; /* Red background */
+  border-color: #dc3545; /* Button border color */
+  color: white; /* White text */
+  font-weight: bold; /* Bold text */
+}
+
+.btn-primary:hover {
+  background-color: #c82333; /* Darker red on hover */
+  border-color: #bd2130; /* Darker border color on hover */
+}
+
+.form-control {
+  width: 100%; /* Full width */
+  padding: 10px; /* Padding inside input and select */
+  margin-bottom: 10px; /* Bottom margin */
+  border: 1px solid #ced4da; /* Border color */
+  border-radius: 4px; /* Rounded corners */
+  background-color: #343a40; /* Dark background */
+  color: white; /* White text */
+}
+
+.form-label {
+  margin-bottom: 5px; /* Bottom margin for labels */
+  color: white; /* White label text */
+}
+
+/* Styling for file input button text */
+.file-input {
+  color: #960018; /* Red text color for file input */
+}
+
+/* Adjust title input color */
+.title-input {
+  color: #960018; /* Red text color for title input */
+}
