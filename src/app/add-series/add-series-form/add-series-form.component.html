@@ -1,35 +1,36 @@
 <!-- add-series-form.component.html -->
 
 <div class="container">
-  <div class="row justify-content-center mt-5">
-    <div class="col-md-6">
-      <div class="card card-bg-dark">
-        <h2 class="text-center mb-4 text-white">Add Series</h2>
-        <form action="/serije/dodajSeriju" method="post" enctype="multipart/form-data" class="login-form-boi">
-          <div class="mb-3">
-            <label for="title" class="form-label text-white">Title:</label>
-            <input type="text" id="title" name="title" class="form-control title-input" required>
-          </div>
-          <div class="mb-3">
-            <label for="description" class="form-label text-white">Description:</label>
-            <textarea id="description" name="description" class="form-control" rows="3" required></textarea>
-          </div>
-          <div class="mb-3">
-            <label for="genre" class="form-label text-white">Genre:</label>
-            <select multiple id="genre" name="genre" class="form-control" required>
-              <option value="action">Action</option>
-              <option value="comedy">Comedy</option>
-              <option value="drama">Drama</option>
-              <!-- Add more options as needed -->
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="image" class="form-label text-white">Image:</label>
-            <input type="file" id="image" name="image" accept="image/png, image/jpeg" class="form-control file-input" required>
-          </div>
-          <button type="submit" class="btn btn-primary btn-block">Add Series</button>
-        </form>
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6">
+        <div class="card card-bg-dark">
+          <h2 class="text-center mb-4">Add Series</h2>
+          <form action="/serije/dodajSeriju" method="post" enctype="multipart/form-data" class="login-form-boi">
+            <div class="mb-3">
+              <label for="title" class="form-label">Title:</label>
+              <input type="text" id="title" name="title" class="form-control title-input" required>
+            </div>
+            <div class="mb-3">
+              <label for="description" class="form-label">Description:</label>
+              <textarea id="description" name="description" class="form-control" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="genre" class="form-label">Genre:</label>
+              <select multiple id="genre" name="genre" class="form-control" required>
+                <option value="action">Action</option>
+                <option value="comedy">Comedy</option>
+                <option value="drama">Drama</option>
+                <!-- Add more options as needed -->
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="image" class="form-label">Image:</label>
+              <input type="file" id="image" name="image" accept="image/png, image/jpeg" class="form-control file-input" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Add Series</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
-</div>
+  
