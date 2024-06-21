@@ -26,6 +26,31 @@
     }
     .btn-group .dropdown-toggle {
       margin-right: 0.5rem; /* Space between filter button and search button */
+      margin-left: 1rem ;
+    }
+    .navbar-brand {
+      color: #dc3545 !important; /* Red color for Anyflix */
+      font-weight: bold; /* Bold font weight */
+    }
+    .navbar-login {
+      margin-left: auto; /* Align login button to the right */
+    }
+    .btn-login {
+      background-color: #dc3545; /* Red background */
+      color: white; /* White text */
+      border: none; /* Remove border */
+      margin-left: 10rem;
+    }
+    .btn-login:hover,
+    .btn-login:focus {
+      color: white; /* White text on hover/focus */
+      background-color: #c82333; /* Darker red on hover/focus */
+    }
+    .navbar-form {
+      flex-grow: 1; /* Allow the form to grow and take up remaining space */
+      display: flex; /* Use flexbox for layout */
+      align-items: center; /* Center items vertically */
+      justify-content: center; /* Center items horizontally */
     }
   </style>
 </head>
@@ -46,24 +71,22 @@
             <a class="nav-link text-white" href="#">Favourites</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Reports
+            <a class="nav-link dropdown-toggle text-white me-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Admin options
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Genre report</a></li>
               <li><a class="dropdown-item" href="#">Movie review report</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="#">Add movie/series</a></li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link disabled text-white" aria-disabled="true">Disabled</a>
-          </li>
         </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <!-- Filter Dropdown Button -->
-          <div class="btn-group">
+        
+        <!-- Centered Search Form -->
+        <form class="navbar-form d-flex">
+          <div class="input-group">
+            <input class="form-control me-2 ms-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-danger dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="bi bi-funnel-fill"></i>
             </button>
@@ -71,11 +94,16 @@
               <li><a class="dropdown-item" href="#">Action</a></li>
               <li><a class="dropdown-item" href="#">Another action</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="#">smth</a></li>
             </ul>
           </div>
-          <button class="btn btn-outline-danger me-2" type="submit">Search</button>
+          <button class="btn btn-outline-danger ms-2" type="submit">Search</button>
         </form>
+        
+        <!-- Login Button -->
+        <div class="navbar-login">
+          <button class="btn btn-login" type="button">Login</button>
+        </div>
       </div>
     </div>
   </nav>

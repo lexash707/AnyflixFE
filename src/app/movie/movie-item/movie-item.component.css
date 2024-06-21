@@ -1,28 +1,27 @@
 .card-bg-dark {
-    background-color: #343a40; /* Tamno siva boja */
-    color: white; /* Beli tekst */
-  }
+  background-color: #343a40; /* Dark gray background */
+  color: white; /* White text */
+}
 
-  .btn-primary {
-    background-color: #960018; /* Crvena boja */
-    border-color: #dc3545; /* Boja ivice dugmeta */
-  }
+.btn-primary {
+  background-color: #960018; /* Red color */
+  border-color: #dc3545; /* Button border color */
+}
 
-  .btn-primary:hover {
-    background-color: #c82333; /* Tamnija nijansa crvene boje prilikom hovera */
-    border-color: #bd2130; /* Boja ivice prilikom hovera */
-  }
+.btn-primary:hover {
+  background-color: #c82333; /* Darker red on hover */
+  border-color: #bd2130; /* Darker border color on hover */
+}
 
-  .card {
-    width: 18rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .card:hover {
-    transform: translateY(-5px); /* Move the card slightly up */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
-  }
-  
+.card {
+  width: 18rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Move the card slightly up on hover */
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5); /* Dirty white box shadow */
+}

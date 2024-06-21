@@ -12,12 +12,12 @@ import { Movie } from '../../model/movie';
 
 export class MovieItemComponent implements OnInit {
   
-  public movie: Movie;
+  public movie!: Movie;
 
   constructor() {
   }
 
   ngOnInit() {
-    this.movie = new Movie('Movie Title', '');
+    this.movie = new Movie('Movie Title', 'https://i.imgur.com/Tia9a2X.jpeg');
   }
 }
