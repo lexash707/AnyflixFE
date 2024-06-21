@@ -5,16 +5,24 @@
     border-radius: 10px;
     background-color: #343a40; /* Dark background */
     color: white; /* White text */
+    overflow: hidden;
   }
   
-  .card-horizontal .card-body {
-    padding: 20px;
+  .img-fluid {
+    height: 100%; /* Ensure the image takes up the full height */
   }
   
-  .card-horizontal .img-fluid {
-    border-radius: 10px 0 0 10px;
-    height: 100%;
-    object-fit: cover;
+  .card-body {
+    padding: 20px; /* Padding inside the card */
+  }
+  
+  .text-danger {
+    color: #dc3545 !important; /* Red color for title */
+    font-weight: bold; /* Bold text */
+  }
+  
+  .text-white {
+    color: white !important; /* White text */
   }
   
   .btn-primary {
@@ -31,7 +39,7 @@
   
   .form-control {
     width: 100%; /* Full width */
-    padding: 10px; /* Padding inside input and select */
+    padding: 10px; /* Padding inside input and textarea */
     margin-bottom: 10px; /* Bottom margin */
     border: 1px solid #ced4da; /* Border color */
     border-radius: 4px; /* Rounded corners */
@@ -42,5 +50,9 @@
   .form-label {
     margin-bottom: 5px; /* Bottom margin for labels */
     color: white; /* White label text */
+  }
+  
+  .w-100 {
+    width: 100%; /* Full width for form */
   }
   

@@ -5,6 +5,7 @@ import { MovieItemComponent } from './movie/movie-item/movie-item.component';
 import { LoginFormComponent } from './login/login-form/login-form.component';
 import { AddSeriesFormComponent } from './add-series/add-series-form/add-series-form.component';
 import { DetailCardComponent } from './details/detail-card/detail-card.component';
+import { CommentCardComponent } from './comment/comment-card/comment-card.component';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,8 @@ import { DetailCardComponent } from './details/detail-card/detail-card.component
     MovieItemComponent, 
     LoginFormComponent, 
     AddSeriesFormComponent, 
-    DetailCardComponent
+    DetailCardComponent,
+    CommentCardComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'] 

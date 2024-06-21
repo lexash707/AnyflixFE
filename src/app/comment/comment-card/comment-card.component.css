@@ -1,0 +1,30 @@
+.comment-card-horizontal {
+    display: flex;
+    flex-direction: row;
+    border: none;
+    border-radius: 10px;
+    background-color: #343a40; /* Dark background */
+    color: white; /* White text */
+    overflow: hidden;
+    padding: 10px;
+  }
+  
+  .username {
+    color: #dc3545; /* Red color */
+    font-weight: bold; /* Bold text */
+    margin-right: 10px;
+  }
+  
+  .comment-text {
+    flex-grow: 1;
+    margin: 0;
+  }
+  
+  .rating {
+    background-color: #dc3545; /* Red background */
+    color: white; /* White text */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold; /* Bold text */
+  }
+  
