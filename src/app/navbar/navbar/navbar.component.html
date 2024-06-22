@@ -1,13 +1,13 @@
 <nav class="navbar navbar-expand-lg bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand text-white" href="#">Anyflix</a>
+      <a class="navbar-brand text-white" href="#" [routerLink]="['']" routerLinkActive="active">Anyflix</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+            <a class="nav-link active text-white" aria-current="page" href="#" [routerLink]="['']" routerLinkActive="active">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white" href="#">Favourites</a>
@@ -20,7 +20,7 @@
               <li><a class="dropdown-item" href="#">Genre report</a></li>
               <li><a class="dropdown-item" href="#">Movie review report</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Add movie/series</a></li>
+              <li><a class="dropdown-item" href="#" [routerLink]="['add-series']" routerLinkActive="active">Add movie/series</a></li>
             </ul>
           </li>
         </ul>
@@ -44,7 +44,7 @@
         
         <!-- Login Button -->
         <div class="navbar-login">
-          <button class="btn btn-login" type="button">Login</button>
+          <a class="btn btn-login" type="button" [routerLink]="['login']" routerLinkActive="active">Login</a>
         </div>
       </div>
     </div>
