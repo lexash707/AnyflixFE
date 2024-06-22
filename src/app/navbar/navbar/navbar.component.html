@@ -32,11 +32,8 @@
             <button class="btn btn-outline-danger dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="bi bi-funnel-fill"></i>
             </button>
-            <ul class="dropdown-menu dropdown-menu-end">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">smth</a></li>
+            <ul class="dropdown-menu dropdown-menu-end" *ngIf="items | async as items_">
+              <li *ngFor="let item of items_"><a class="dropdown-item" href="#">{{ item.name }}</a></li>            
             </ul>
           </div>
           <button class="btn btn-outline-danger ms-2" type="submit">Search</button>

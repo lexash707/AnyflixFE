@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieItemComponent } from '../../movie/movie-item/movie-item.component';
 import { SeriesServiceService } from '../../services/series-service/series-service.service';
-import { Movie } from '../../model/movie';
+import { Movie } from '../../model/movie/movie';
 import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
 
