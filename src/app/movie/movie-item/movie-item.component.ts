@@ -1,10 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Movie } from '../../model/movie/movie';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-movie-item',
   standalone: true,
-  imports: [],
+  imports: [RouterModule, CommonModule],
   templateUrl: './movie-item.component.html',
   styleUrls: ['./movie-item.component.css']
 

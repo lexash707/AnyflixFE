@@ -15,7 +15,17 @@ export class SeriesServiceService {
 
   getAll():Observable<Movie[]> {
     return this.httpClient.get<any>(Paths.paths.series)
-    .pipe(map(data => data.map((item: { naziv: string; slika: string; idSerije: number; }) => new Movie(item.naziv, item.slika, item.idSerije))));
+    .pipe(map(data => data.map((item: { naziv: string; slika: string; idSerije: number; sinopsis: string}) => new Movie(item.naziv, item.slika, item.idSerije, item.sinopsis))));
+  }
+
+  openFileReport(){
+    this.httpClient.post<any>(Paths.paths.seriesreport, {} , {headers: {} , responseType: 'blob' as 'json'}).subscribe({
+      next: data => {
+        var o = window.URL.createObjectURL(data);
+        window.open(o);
+        console.log(o);
+      }
+    })
   }
 
 }

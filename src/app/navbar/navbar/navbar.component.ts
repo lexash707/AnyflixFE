@@ -4,6 +4,7 @@ import { Genre } from '../../model/genre/genre';
 import { GenreService } from '../../services/genre-service/genre.service';
 import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { SeriesServiceService } from '../../services/series-service/series-service.service';
 
 @Component({
   selector: 'app-navbar',
@@ -15,7 +16,7 @@ import { CommonModule } from '@angular/common';
 export class NavbarComponent {
   public items!: Observable<Genre[]>;
 
-  constructor(private genreService:GenreService){
+  constructor(private genreService:GenreService, private seriesService:SeriesServiceService){
     
   }
 
@@ -23,4 +24,12 @@ export class NavbarComponent {
     this.items = this.genreService.getAll();
   }
 
+  openReport(): void{
+    this.genreService.openFileReport();
+  }
+
+  openReportS(): void{
+    this.seriesService.openFileReport();
+  }
+  
 }

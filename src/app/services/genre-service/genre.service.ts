@@ -18,4 +18,14 @@ export class GenreService {
     return this.httpClient.get<any>(Paths.paths.genres)
     .pipe(map(data => data.map((item: { naziv: string; idZanr: number; }) => new Genre(item.naziv, item.idZanr))));
   }
+
+  openFileReport(){
+    this.httpClient.get<any>(Paths.paths.genrereport, {headers: {} , responseType: 'blob' as 'json'}).subscribe({
+      next: data => {
+        var o = window.URL.createObjectURL(data);
+        window.open(o);
+        console.log(o);
+      }
+    })
+  }
 }

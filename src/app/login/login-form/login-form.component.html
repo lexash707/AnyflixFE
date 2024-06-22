@@ -1,23 +1,22 @@
 <div class="container">
-    <div class="row justify-content-center mt-5">
-      <div class="col-md-6">
-        <div class="card card-bg-dark">
-          <div class="card-body">
-            <h2 class="card-title text-center mb-4" style="color: #dc3545; font-weight: bold;">Login to Anyflix</h2>
-            <form>
-              <div class="mb-3">
-                <label for="username" class="form-label text-white">Username</label>
-                <input type="text" id="username" name="username" class="form-control" required>
-              </div>
-              <div class="mb-3">
-                <label for="password" class="form-label text-white">Password</label>
-                <input type="password" id="password" name="password" class="form-control" required>
-              </div>
-              <button type="submit" class="btn btn-primary btn-block">Login</button>
-            </form>
-          </div>
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+      <div class="card card-bg-dark">
+        <div class="card-body">
+          <h2 class="card-title text-center mb-4" style="color: #dc3545; font-weight: bold;">Login to Anyflix</h2>
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+              <label for="username" class="form-label text-white">Username</label>
+              <input type="text" id="username" formControlName="username" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label text-white">Password</label>
+              <input type="password" id="password" formControlName="password" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" [disabled]="loginForm.invalid">Login</button>
+          </form>
         </div>
       </div>
     </div>
   </div>
-  
+</div>

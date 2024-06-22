@@ -23,4 +23,5 @@ export class MovieGridComponent implements OnInit{
     this.items = this.seriesService.getAll();
   }
   
+  
 }

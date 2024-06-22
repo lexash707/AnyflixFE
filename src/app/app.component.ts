@@ -8,6 +8,8 @@ import { DetailCardComponent } from './details/detail-card/detail-card.component
 import { CommentCardComponent } from './comment/comment-card/comment-card.component';
 import { NavbarComponent } from './navbar/navbar/navbar.component';
 import { CommonModule } from '@angular/common';
+import { DetailsPageComponent } from './details-page/details-page/details-page.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +23,9 @@ import { CommonModule } from '@angular/common';
     DetailCardComponent,
     CommentCardComponent,
     NavbarComponent,
-    CommonModule
+    CommonModule,
+    DetailsPageComponent,
+    RouterModule
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'] 

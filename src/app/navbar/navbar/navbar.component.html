@@ -17,8 +17,8 @@
               Admin options
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Genre report</a></li>
-              <li><a class="dropdown-item" href="#">Movie review report</a></li>
+              <li><a class="dropdown-item" (click)="openReport()">Genre report</a></li>
+              <li><a class="dropdown-item" (click)="openReportS()">Series review report</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#" [routerLink]="['add-series']" routerLinkActive="active">Add movie/series</a></li>
             </ul>
