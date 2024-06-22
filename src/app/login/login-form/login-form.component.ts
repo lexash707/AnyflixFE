@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { AuthServiceService } from '../../services/login/auth-service.service';
 
 @Component({
   selector: 'app-login-form',
@@ -12,7 +13,7 @@ import { CommonModule } from '@angular/common';
 export class LoginFormComponent implements OnInit {
   loginForm!: FormGroup;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private authService: AuthServiceService) {}
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
@@ -20,10 +21,10 @@ export class LoginFormComponent implements OnInit {
       password: ['', Validators.required]
     });
   }
-
+  
   onSubmit(): void {
     if (this.loginForm.valid) {
-      console.log(this.loginForm.value);
+      this.authService.login(this.loginForm.value.username, this.loginForm.value.password)
     }
   }
 }
