@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Movie } from '../../model/movie';
 
 @Component({
@@ -12,12 +12,13 @@ import { Movie } from '../../model/movie';
 
 export class MovieItemComponent implements OnInit {
   
+  @Input()
   public movie!: Movie;
 
   constructor() {
   }
 
   ngOnInit() {
-    this.movie = new Movie('Movie Title', 'https://i.imgur.com/Tia9a2X.jpeg');
+    // this.movie = new Movie('Movie Title', 'https://i.imgur.com/Tia9a2X.jpeg');
   }
 }

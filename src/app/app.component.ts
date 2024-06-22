@@ -7,6 +7,7 @@ import { AddSeriesFormComponent } from './add-series/add-series-form/add-series-
 import { DetailCardComponent } from './details/detail-card/detail-card.component';
 import { CommentCardComponent } from './comment/comment-card/comment-card.component';
 import { NavbarComponent } from './navbar/navbar/navbar.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,8 @@ import { NavbarComponent } from './navbar/navbar/navbar.component';
     AddSeriesFormComponent, 
     DetailCardComponent,
     CommentCardComponent,
-    NavbarComponent
+    NavbarComponent,
+    CommonModule
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'] 
