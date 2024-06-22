@@ -4,7 +4,7 @@ export class Movie{
 
   constructor(
     public name: string,
-    public image: string) {
-    
+    public image: string,
+    public id: number) {
   } 
 }

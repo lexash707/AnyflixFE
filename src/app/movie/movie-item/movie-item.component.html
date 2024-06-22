@@ -1,5 +1,7 @@
-<div class="card bg-dark rounded" style="width: 18rem; overflow: hidden; margin: 1rem; padding: 5px;">
-  <img src="http://localhost:8080/img/{{movie.image}}" class="card-img-top" alt="{{ movie.name }}">
+<div class="card bg-dark card-fixed-size">
+  <div class="image-container flex-grow-1">
+    <img src="http://localhost:8080/img/{{movie.image}}" class="card-img-top" alt="{{ movie.name }}">
+  </div>
   <div class="card-body text-center">
     <h5 class="card-title text-white">{{ movie.name }}</h5>
     <a href="#" class="btn btn-primary btn-block w-100">Details</a>
