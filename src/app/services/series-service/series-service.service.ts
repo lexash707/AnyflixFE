@@ -14,6 +14,6 @@ export class SeriesServiceService {
 
   getAll():Observable<Movie[]> {
     return this.httpClient.get<any>("http://localhost:8080/series/all")
-    .pipe(map(data => data.map((item: { naziv: string; slika: string; }) => new Movie(item.naziv, item.slika))));
+    .pipe(map(data => data.map((item: { naziv: string; slika: string; idSerije: number; }) => new Movie(item.naziv, item.slika, item.idSerije))));
   }
 }
