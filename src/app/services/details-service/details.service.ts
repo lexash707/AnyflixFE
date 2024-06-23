@@ -20,7 +20,7 @@ export class DetailsService {
     return this.http.get<Details>(url).pipe(
       map(response => {
         const movie = new Movie(response.serija.naziv, response.serija.slika, response.serija.idSerije, response.serija.sinopsis);
-        const reviews = response.ocene.map(ocena => new Review(ocena.ocena, ocena.komentar));
+        const reviews = response.ocene.map(ocena => new Review(ocena.ocena, ocena.komentar, ocena.korisnik.username));
         return { movie, reviews };
       })
     );

@@ -37,9 +37,13 @@ export class DetailsPageComponent {
   fetchMovie(id: number) {
     this.detailsService.getMovieById(id).subscribe({
       next: ({ movie, reviews }) => {
-        this.movie = movie;
+          this.movie = movie;
         this.reviews = reviews;
         this.items$ = of(reviews); 
       }})
+    }
+
+    newComment(mlkacs:any){
+      this.fetchMovie(this.movie!.id);
     }
 }

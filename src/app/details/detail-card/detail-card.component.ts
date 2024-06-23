@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Movie } from '../../model/movie/movie';
@@ -16,11 +16,15 @@ export class DetailCardComponent {
   @Input()
   public movie!:Movie;
 
+  @Output()
+  public addedNew:EventEmitter<boolean> = new EventEmitter<boolean>();
+
   constructor(private detailsService:DetailsService){}
 
   onSubmit(form: any) {
     if (form.valid) {
-      this.detailsService.saveReview(new Review(form.value.rating, form.value.review), this.movie.id);
+      this.detailsService.saveReview(new Review(form.value.rating, form.value.review, localStorage.getItem('user')!), this.movie.id);
+      this.addedNew.emit(true);
     }
   }
 }

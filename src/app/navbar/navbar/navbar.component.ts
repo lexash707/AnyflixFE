@@ -5,6 +5,7 @@ import { GenreService } from '../../services/genre-service/genre.service';
 import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { SeriesServiceService } from '../../services/series-service/series-service.service';
+import { AuthServiceService } from '../../services/login/auth-service.service';
 
 @Component({
   selector: 'app-navbar',
@@ -16,7 +17,7 @@ import { SeriesServiceService } from '../../services/series-service/series-servi
 export class NavbarComponent {
   public items!: Observable<Genre[]>;
 
-  constructor(private genreService:GenreService, private seriesService:SeriesServiceService){
+  constructor(private genreService:GenreService, private seriesService:SeriesServiceService, public authService:AuthServiceService){
     
   }
 

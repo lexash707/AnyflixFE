@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
 import { Paths } from '../../../api/paths';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthServiceService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router:Router) { }
 
   login(username:String, password:String){
     this.http.post(Paths.paths.login, 
@@ -18,7 +19,8 @@ export class AuthServiceService {
       }).subscribe({ next: (data: any) => { 
         localStorage.setItem('user', data.user.username); 
         localStorage.setItem('token', data.token);
-        localStorage.setItem('tip korisnika', data.user.tipkorisnika.idTipa) 
+        localStorage.setItem('tip korisnika', data.user.tipkorisnika.idTipa);
+        this.router.navigate(['']);
       } });
   }
 
