@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { Genre } from '../../model/genre/genre';
 import { GenreService } from '../../services/genre-service/genre.service';
 import { AddSeriesService } from '../../services/add-series/add-series.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-series-form',
@@ -20,7 +21,8 @@ export class AddSeriesFormComponent implements OnInit {
 
   constructor(private fb: FormBuilder,
              private genreService:GenreService, 
-             private addSeriesService:AddSeriesService) {}
+             private addSeriesService:AddSeriesService,
+             private router:Router) {}
 
   ngOnInit(): void {
     this.seriesForm = this.fb.group({
