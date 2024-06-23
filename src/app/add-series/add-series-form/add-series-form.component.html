@@ -3,7 +3,7 @@
     <div class="col-md-6">
       <div class="card card-bg-dark">
         <h2 class="text-center mb-4">Add Series</h2>
-        <form [formGroup]="seriesForm" (ngSubmit)="onSubmit()">
+        <form [formGroup]="seriesForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
           <div class="mb-3">
             <label for="title" class="form-label">Title:</label>
             <input type="text" id="title" formControlName="title" class="form-control title-input" required>
@@ -14,18 +14,15 @@
           </div>
           <div class="mb-3">
             <label for="genre" class="form-label">Genre:</label>
-            <select id="genre" formControlName="genre" class="form-control" multiple required>
-              <option value="action">Action</option>
-              <option value="comedy">Comedy</option>
-              <option value="drama">Drama</option>
-              <!-- Add more options as needed -->
+            <select id="genre" formControlName="genre" class="form-control" multiple required *ngIf="items | async as items_">
+              <option [value]="item.id" *ngFor="let item of items_">{{item.name}}</option>  
             </select>
           </div>
           <div class="mb-3">
             <label for="image" class="form-label">Image:</label>
-            <input type="file" id="image" class="form-control file-input" required>
+            <input type="file" id="image" formControlName="image" class="form-control file-input" required (change)="onFilechange($event)">
           </div>
-          <button type="submit" class="btn btn-primary btn-block" [disabled]="seriesForm.invalid">Add Series</button>
+          <button type="submit" class="btn btn-primary btn-block">Add Series</button>
         </form>
       </div>
     </div>
