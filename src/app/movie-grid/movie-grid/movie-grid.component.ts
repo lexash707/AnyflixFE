@@ -13,15 +13,19 @@ import { CommonModule } from '@angular/common';
   styleUrl: './movie-grid.component.css'
 })
 export class MovieGridComponent implements OnInit{
-  public items!: Observable<Movie[]>;
+  // public items!: Observable<Movie[]>;
+  public movies: Movie[] = [];
 
   constructor(private seriesService:SeriesServiceService){
-    
+  
   }
 
   ngOnInit(): void {
-    this.items = this.seriesService.getAll();
+    this.seriesService.bs.subscribe({next: data => this.movies = data});
+    this.seriesService.getAll();
+    // this.seriesService.getFav();
   }
+
   
   
 }

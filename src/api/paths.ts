@@ -13,6 +13,7 @@ export class Paths{
     imgpath: "http://localhost:8080/img/",
     
     login: "http://localhost:8080/user/login",
-    favourite: "http://localhost:8080/user/see-favourites"
+    favourite: "http://localhost:8080/series/add-favourite",
+    showfav: "http://localhost:8080/index/show-favourites"
 };
 };

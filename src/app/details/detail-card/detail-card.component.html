@@ -8,16 +8,29 @@
         <div class="card-body">
           <h2 class="text-center mb-4 text-danger font-weight-bold">{{ movie.name }}</h2>
           <p class="text-center text-white">{{ movie.description }}</p>
-          <form (ngSubmit)="onSubmit(detailsForm)" #detailsForm="ngForm" class="w-100">
+          <form (ngSubmit)="onSubmit(detailsForm)" [formGroup] = "detailsForm" class="w-100">
             <div class="mb-3">
               <label for="rating" class="form-label text-white">Rating (1-10):</label>
-              <input type="number" id="rating" name="rating" class="form-control" min="1" max="10" required ngModel>
+              <input type="number" id="rating" formControlName="rating" class="form-control" min="1" max="10">
+              <p *ngIf="detailsForm.controls['rating'].touched && detailsForm.controls['rating'].hasError('required')" style="color: rgb(255, 0, 0);">
+                Rating can't be empty.
+              </p>
+              <p *ngIf="(this.detailsForm.controls['rating'].hasError('min') || this.detailsForm.controls['rating'].hasError('max')) && detailsForm.controls['rating'].touched" style="color: rgb(255, 0, 0);">
+                Rating must be a number between 1-10.
+              </p>
             </div>
             <div class="mb-3">
               <label for="review" class="form-label text-white">Review:</label>
-              <textarea id="review" name="review" class="form-control" rows="3" required ngModel></textarea>
+              <textarea id="review" formControlName="review" class="form-control" rows="3"></textarea>
+              <p *ngIf="detailsForm.controls['review'].hasError('required') && detailsForm.controls['review'].touched" style="color: rgb(255, 0, 0);">
+                Comment can't be empty.
+              </p>
             </div>
-            <button type="submit" class="btn btn-primary btn-block">Submit Review</button>
+
+            <div class="buttonholder">
+              <button type="submit" class="btn btn-primary btn-block" [disabled]="!detailsForm.valid">Submit Review</button>
+              <button type="button" (click)="addFav(movie.id)" class="btn btn-primary btn-block fav">Favourite</button>
+            </div>
           </form>
         </div>
       </div>

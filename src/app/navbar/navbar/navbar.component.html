@@ -7,10 +7,10 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active text-white" aria-current="page" href="#" [routerLink]="['']" routerLinkActive="active">Home</a>
+            <a class="nav-link active text-white" aria-current="page" href="#" [routerLink]="['']" routerLinkActive="active" (click)="goHome()">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="#" *ngIf="authService.isLoggedIn()">Favourites</a>
+            <a class="nav-link text-white" href="#" *ngIf="authService.isLoggedIn()" (click)="favourites()">Favourites</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-white me-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" *ngIf="authService.isAdmin()">
@@ -26,14 +26,14 @@
         </ul>
         
         <!-- Centered Search Form -->
-        <form class="navbar-form d-flex">
+        <form class="navbar-form d-flex" (ngSubmit)="search()" [formGroup]="searchForm">
           <div class="input-group">
-            <input class="form-control me-2 ms-2" type="search" placeholder="Search" aria-label="Search">
+            <input class="form-control me-2 ms-2" type="search" placeholder="Search" aria-label="Search" formControlName="search">
             <button class="btn btn-outline-danger dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="bi bi-funnel-fill"></i>
             </button>
-            <ul class="dropdown-menu dropdown-menu-end" *ngIf="items | async as items_">
-              <li *ngFor="let item of items_"><a class="dropdown-item" href="#">{{ item.name }}</a></li>            
+            <ul class="dropdown-menu dropdown-menu-end" *ngIf="items">
+              <li *ngFor="let item of items"><a class="dropdown-item" (click)="select(item.id)" [ngClass] = "{'selectedGenre':selectedGenreId == item.id}">{{ item.name }}</a></li>            
             </ul>
           </div>
           <button class="btn btn-outline-danger ms-2" type="submit">Search</button>

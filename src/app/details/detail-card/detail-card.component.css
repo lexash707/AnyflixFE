@@ -55,4 +55,9 @@
   .w-100 {
     width: 100%; /* Full width for form */
   }
+
+  .buttonholder {
+    display: flex;
+    justify-content: space-between;
+  }
   

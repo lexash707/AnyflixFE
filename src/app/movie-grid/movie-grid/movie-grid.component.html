@@ -1,6 +1,6 @@
-<div class="container" *ngIf="items | async as items_">
+<div class="container" *ngIf="movies">
   <div class="row">
-    <div class="col-md-3" *ngFor="let item of items_">
+    <div class="col-md-3" *ngFor="let item of movies">
       <app-movie-item [movie]="item"></app-movie-item>
     </div>
   </div>
